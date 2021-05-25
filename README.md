@@ -34,13 +34,16 @@ All benchmarks results were obtained on a Macbook with an Intel(R) Core(TM) i7-9
 ### Activations:
 
 Tanh:
+
 ![](./plots/tanh_static.png)
 ![](./plots/tanh_dynamic.png)
 
 ReLU:
+
 ![](./plots/relu_static.png)
 ![](./plots/relu_dynamic.png)
 
 Sigmoid:
+
 ![](./plots/sigmoid_static.png)
 ![](./plots/sigmoid_dynamic.png)

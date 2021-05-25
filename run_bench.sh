@@ -6,7 +6,7 @@ build_bench()
 {
     rm -Rf build
     sed -i "8s/.*/set($1 ON CACHE BOOL \"Use RTNeural with this backend\" FORCE)/" CMakeLists.txt
-    cmake -Bbuild -DCMAKE_PREFIX_PATH=~/Documents/RTNeural_Compare/modules/libtorch
+    cmake -Bbuild
     cmake --build build --parallel --config Release
 }
 
@@ -28,11 +28,11 @@ run_bench()
     done 
 }
 
-build_bench "RTNEURAL_STL"
-run_bench "results/bench_stl.txt"
+# build_bench "RTNEURAL_STL"
+# run_bench "results/bench_stl.txt"
 
-build_bench "RTNEURAL_EIGEN"
-run_bench "results/bench_eigen.txt"
+# build_bench "RTNEURAL_EIGEN"
+# run_bench "results/bench_eigen.txt"
 
 build_bench "RTNEURAL_XSIMD"
 run_bench "results/bench_xsimd.txt"

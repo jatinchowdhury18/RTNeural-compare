@@ -1,8 +1,8 @@
-#include <RTNeural/RTNeural.h>
+#include <RTNeural.h>
 #include <chrono>
 #include <iostream>
 #include "torch_layer.hpp"
-#include "modules/RTNeural/bench/layer_creator.hpp"
+#include "rtneural_layer.hpp"
 
 void help()
 {
@@ -12,46 +12,6 @@ void help()
     std::cout
         << "    Note that for activation layers the out_size argument is ignored."
         << std::endl;
-}
-
-std::vector<std::vector<double>> generate_signal(size_t n_samples,
-    size_t in_size)
-{
-    std::vector<std::vector<double>> signal(n_samples);
-    for(auto& x : signal)
-        x.resize(in_size, 0.0);
-
-    std::default_random_engine generator;
-    std::uniform_real_distribution<double> distribution(-1.0, 1.0);
-
-    for(size_t i = 0; i < n_samples; ++i)
-        for(size_t k = 0; k < in_size; ++k)
-            signal[i][k] = distribution(generator);
-
-    return std::move(signal);
-}
-
-double bench_rtneural(const std::string &layer_type, size_t size, size_t n_samples)
-{
-    // create layer
-    auto layer = create_layer(layer_type, size, size);
-    if(layer == nullptr)
-        return -1.0;
-
-    // generate audio
-    const auto signal = generate_signal(n_samples, size);
-    std::vector<double> output(size);
-
-    // run benchmark
-    using clock_t = std::chrono::high_resolution_clock;
-    using second_t = std::chrono::duration<double>;
-
-    auto start = clock_t::now();
-    for(size_t i = 0; i < n_samples; ++i)
-        layer->forward(signal[i].data(), output.data());
-    auto duration = std::chrono::duration_cast<second_t>(clock_t::now() - start).count();
-    
-    return duration;
 }
 
 int main(int argc, char* argv[])
@@ -81,7 +41,7 @@ int main(int argc, char* argv[])
     const auto n_samples = static_cast<size_t>(sample_rate * length_seconds);
 
     std::cout << "RTNEURAL..." << std::endl;
-    auto duration = bench_rtneural(layer_type, size, n_samples);
+    auto duration = rtneural_bench(layer_type, size, n_samples);
     std::cout << "Processed " << length_seconds << " seconds of signal in "
               << duration << " seconds" << std::endl;
     std::cout << length_seconds / duration << "x real-time" << std::endl;

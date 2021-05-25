@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
-project(example-app)
+project(RTNeural-compare)
 
 find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
@@ -7,9 +7,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 # Using RTNeural with backend
 set(RTNEURAL_XSIMD ON CACHE BOOL "Use RTNeural with this backend" FORCE)
 add_subdirectory(modules/RTNeural)
-include_directories(modules/RTNeural)
+include_directories(modules/RTNeural/RTNeural)
 
-add_executable(rtneural_compare_bench benchmark.cpp)
+add_executable(rtneural_compare_bench src/benchmark.cpp)
 target_link_libraries(rtneural_compare_bench "${TORCH_LIBRARIES}" RTNeural)
 set_property(TARGET rtneural_compare_bench PROPERTY CXX_STANDARD 14)
 

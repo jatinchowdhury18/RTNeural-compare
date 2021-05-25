@@ -13,6 +13,16 @@ base_results = {
     "sigmoid": [0, 0, 0, 0, 0]
 }
 
+layer_names = {
+    "dense": "Dense",
+    "conv1d": "Conv1D",
+    "lstm": "LSTM",
+    "gru": "GRU",
+    "tanh": "Tanh",
+    "relu": "ReLU",
+    "sigmoid": "Sigmoid"
+}
+
 def load_file(file):
     torch = copy.deepcopy(base_results)
     rt_st = copy.deepcopy(base_results)
@@ -60,8 +70,9 @@ for k in base_results.keys():
     if k == "sizes":
         continue
 
-    make_plot(f'{k} speed comparison (RTNeural compile-time)', f'plots/{k}_static.png',
+    name = layer_names[k]
+    make_plot(f'{name} speed comparison (RTNeural compile-time)', f'plots/{k}_static.png',
         [torch_results[k], rt_xsimd_st[k], rt_eigen_st[k], rt_stl_st[k]])
     
-    make_plot(f'{k} speed comparison (RTNeural run-time)', f'plots/{k}_dynamic.png',
+    make_plot(f'{name} speed comparison (RTNeural run-time)', f'plots/{k}_dynamic.png',
         [torch_results[k], rt_xsimd_dyn[k], rt_eigen_dyn[k], rt_stl_dyn[k]])

@@ -37,6 +37,29 @@ std::vector<std::vector<double>> generate_signal(size_t n_samples,
     return std::move(signal);
 }
 
+double rtneural_bench_dynamic(const std::string &layer_type, size_t size, size_t n_samples)
+{
+    // create layer
+    auto layer = create_layer(layer_type, size, size);
+    if(layer == nullptr)
+        return -1.0;
+
+    // generate audio
+    const auto signal = generate_signal(n_samples, size);
+    std::vector<double> output(size);
+
+    // run benchmark
+    using clock_t = std::chrono::high_resolution_clock;
+    using second_t = std::chrono::duration<double>;
+
+    auto start = clock_t::now();
+    for(size_t i = 0; i < n_samples; ++i)
+        layer->forward(signal[i].data(), output.data());
+    auto duration = std::chrono::duration_cast<second_t>(clock_t::now() - start).count();
+    
+    return duration;
+}
+
 double rtneural_bench (const std::string &layer_type, size_t size, size_t n_samples) {
     using namespace RTNeural;
     

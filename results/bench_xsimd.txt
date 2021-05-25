@@ -1,245 +1,350 @@
-Benchmarking dense layer, with input size 4 and output size 4, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.0601303 seconds
-166.306x real-time
+Benchmarking dense layer, with input size 4 and output size 4, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 3.228e-06 seconds
+309.789x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 1.303e-06 seconds
+767.46x real-time
 TORCH...
-Processed 10 seconds of signal in 11.7073 seconds
-0.854171x real-time
-Benchmarking dense layer, with input size 8 and output size 8, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.146172 seconds
-68.4123x real-time
+Processed 0.001 seconds of signal in 0.000849319 seconds
+1.17741x real-time
+Benchmarking dense layer, with input size 8 and output size 8, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 6.733e-06 seconds
+148.522x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 1.86e-06 seconds
+537.634x real-time
 TORCH...
-Processed 10 seconds of signal in 11.7149 seconds
-0.85361x real-time
-Benchmarking dense layer, with input size 16 and output size 16, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.4785 seconds
-20.8986x real-time
+Processed 0.001 seconds of signal in 0.00094716 seconds
+1.05579x real-time
+Benchmarking dense layer, with input size 16 and output size 16, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 1.1567e-05 seconds
+86.4528x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 3.423e-06 seconds
+292.141x real-time
 TORCH...
-Processed 10 seconds of signal in 11.2607 seconds
-0.888047x real-time
-Benchmarking dense layer, with input size 32 and output size 32, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 1.54496 seconds
-6.47267x real-time
+Processed 0.001 seconds of signal in 0.000824622 seconds
+1.21268x real-time
+Benchmarking dense layer, with input size 32 and output size 32, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 3.619e-05 seconds
+27.6319x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 1.33e-05 seconds
+75.188x real-time
 TORCH...
-Processed 10 seconds of signal in 11.8086 seconds
-0.846841x real-time
-Benchmarking dense layer, with input size 64 and output size 64, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 6.16015 seconds
-1.62334x real-time
+Processed 0.001 seconds of signal in 0.000964177 seconds
+1.03715x real-time
+Benchmarking dense layer, with input size 64 and output size 64, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 0.000158189 seconds
+6.32155x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 7.1503e-05 seconds
+13.9854x real-time
 TORCH...
-Processed 10 seconds of signal in 12.6237 seconds
-0.792162x real-time
-Benchmarking conv1d layer, with input size 4 and output size 4, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.203813 seconds
-49.0647x real-time
+Processed 0.001 seconds of signal in 0.000963028 seconds
+1.03839x real-time
+Benchmarking conv1d layer, with input size 4 and output size 4, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 1.2045e-05 seconds
+83.022x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 1.732e-06 seconds
+577.367x real-time
 TORCH...
-Processed 10 seconds of signal in 29.2457 seconds
-0.341931x real-time
-Benchmarking conv1d layer, with input size 8 and output size 8, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 1.01233 seconds
-9.87825x real-time
+Processed 0.001 seconds of signal in 0.00188242 seconds
+0.531232x real-time
+Benchmarking conv1d layer, with input size 8 and output size 8, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 4.264e-05 seconds
+23.4522x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 5.958e-06 seconds
+167.842x real-time
 TORCH...
-Processed 10 seconds of signal in 25.5651 seconds
-0.391158x real-time
-Benchmarking conv1d layer, with input size 16 and output size 16, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 7.07111 seconds
-1.41421x real-time
+Processed 0.001 seconds of signal in 0.00192516 seconds
+0.519437x real-time
+Benchmarking conv1d layer, with input size 16 and output size 16, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 0.000222287 seconds
+4.49869x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 5.3787e-05 seconds
+18.5919x real-time
 TORCH...
-Processed 10 seconds of signal in 31.8124 seconds
-0.314343x real-time
-Benchmarking conv1d layer, with input size 32 and output size 32, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 48.1897 seconds
-0.207513x real-time
+Processed 0.001 seconds of signal in 0.00235923 seconds
+0.423867x real-time
+Benchmarking conv1d layer, with input size 32 and output size 32, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 0.00127253 seconds
+0.785835x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 0.000636178 seconds
+1.57189x real-time
 TORCH...
-Processed 10 seconds of signal in 66.0733 seconds
-0.151347x real-time
-Benchmarking conv1d layer, with input size 64 and output size 64, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 389.09 seconds
-0.025701x real-time
+Processed 0.001 seconds of signal in 0.00401439 seconds
+0.249104x real-time
+Benchmarking conv1d layer, with input size 64 and output size 64, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 0.0101596 seconds
+0.098429x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 0.00538387 seconds
+0.18574x real-time
 TORCH...
-Processed 10 seconds of signal in 327.676 seconds
-0.0305179x real-time
-Benchmarking gru layer, with input size 4 and output size 4, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.47965 seconds
-20.8486x real-time
+Processed 0.001 seconds of signal in 0.0122531 seconds
+0.0816123x real-time
+Benchmarking gru layer, with input size 4 and output size 4, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 2.2935e-05 seconds
+43.6015x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 8.342e-06 seconds
+119.875x real-time
 TORCH...
-Processed 10 seconds of signal in 76.8955 seconds
-0.130047x real-time
-Benchmarking gru layer, with input size 8 and output size 8, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 1.18406 seconds
-8.44552x real-time
+Processed 0.001 seconds of signal in 0.00480534 seconds
+0.208102x real-time
+Benchmarking gru layer, with input size 8 and output size 8, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 4.3765e-05 seconds
+22.8493x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 1.83e-05 seconds
+54.6448x real-time
 TORCH...
-Processed 10 seconds of signal in 77.2018 seconds
-0.129531x real-time
-Benchmarking gru layer, with input size 16 and output size 16, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 12.8236 seconds
-0.779811x real-time
+Processed 0.001 seconds of signal in 0.00538597 seconds
+0.185668x real-time
+Benchmarking gru layer, with input size 16 and output size 16, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 8.0974e-05 seconds
+12.3496x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 4.1234e-05 seconds
+24.2518x real-time
 TORCH...
-Processed 10 seconds of signal in 77.2535 seconds
-0.129444x real-time
-Benchmarking gru layer, with input size 32 and output size 32, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 10.7943 seconds
-0.926413x real-time
+Processed 0.001 seconds of signal in 0.00484618 seconds
+0.206348x real-time
+Benchmarking gru layer, with input size 32 and output size 32, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 0.000203175 seconds
+4.92187x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 0.000128855 seconds
+7.76066x real-time
 TORCH...
-Processed 10 seconds of signal in 81.0905 seconds
-0.123319x real-time
-Benchmarking gru layer, with input size 64 and output size 64, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 39.5265 seconds
-0.252995x real-time
+Processed 0.001 seconds of signal in 0.00497713 seconds
+0.200919x real-time
+Benchmarking gru layer, with input size 64 and output size 64, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 0.000894907 seconds
+1.11743x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 0.000504167 seconds
+1.98347x real-time
 TORCH...
-Processed 10 seconds of signal in 82.8838 seconds
-0.120651x real-time
-Benchmarking lstm layer, with input size 4 and output size 4, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.719201 seconds
-13.9043x real-time
+Processed 0.001 seconds of signal in 0.0055645 seconds
+0.179711x real-time
+Benchmarking lstm layer, with input size 4 and output size 4, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 4.0991e-05 seconds
+24.3956x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 1.582e-05 seconds
+63.2111x real-time
 TORCH...
-Processed 10 seconds of signal in 76.9176 seconds
-0.130009x real-time
-Benchmarking lstm layer, with input size 8 and output size 8, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 1.70656 seconds
-5.85974x real-time
+Processed 0.001 seconds of signal in 0.00519831 seconds
+0.19237x real-time
+Benchmarking lstm layer, with input size 8 and output size 8, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 4.755e-05 seconds
+21.0305x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 2.3132e-05 seconds
+43.2302x real-time
 TORCH...
-Processed 10 seconds of signal in 78.7017 seconds
-0.127062x real-time
-Benchmarking lstm layer, with input size 16 and output size 16, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 4.68921 seconds
-2.13256x real-time
+Processed 0.001 seconds of signal in 0.00494506 seconds
+0.202222x real-time
+Benchmarking lstm layer, with input size 16 and output size 16, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 0.000102742 seconds
+9.73312x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 9.7046e-05 seconds
+10.3044x real-time
 TORCH...
-Processed 10 seconds of signal in 79.2584 seconds
-0.12617x real-time
-Benchmarking lstm layer, with input size 32 and output size 32, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 14.959 seconds
-0.668495x real-time
+Processed 0.001 seconds of signal in 0.00503882 seconds
+0.198459x real-time
+Benchmarking lstm layer, with input size 32 and output size 32, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 0.000272715 seconds
+3.66683x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 0.000176753 seconds
+5.65761x real-time
 TORCH...
-Processed 10 seconds of signal in 80.5377 seconds
-0.124165x real-time
-Benchmarking lstm layer, with input size 64 and output size 64, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 53.6538 seconds
-0.18638x real-time
+Processed 0.001 seconds of signal in 0.00488747 seconds
+0.204605x real-time
+Benchmarking lstm layer, with input size 64 and output size 64, with signal length 0.001 seconds
+RTNEURAL STATIC...
+Processed 0.001 seconds of signal in 0.00108505 seconds
+0.921615x real-time
+RTNEURAL DYNAMIC...
+Processed 0.001 seconds of signal in 0.000699653 seconds
+1.42928x real-time
 TORCH...
-Processed 10 seconds of signal in 83.2231 seconds
-0.120159x real-time
-Benchmarking tanh layer, with input size 4 and output size 4, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.177354 seconds
-56.3845x real-time
+Processed 0.001 seconds of signal in 0.00538189 seconds
+0.185809x real-time
+Benchmarking tanh layer, with input size 4 and output size 4, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.000178033 seconds
+561.694x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 4e-08 seconds
+2.5e+06x real-time
 TORCH...
-Processed 10 seconds of signal in 1.04333 seconds
-9.58467x real-time
-Benchmarking tanh layer, with input size 8 and output size 8, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.336253 seconds
-29.7396x real-time
+Processed 0.1 seconds of signal in 0.00580602 seconds
+17.2235x real-time
+Benchmarking tanh layer, with input size 8 and output size 8, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.000264246 seconds
+378.435x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 5.3e-08 seconds
+1.88679e+06x real-time
 TORCH...
-Processed 10 seconds of signal in 1.04264 seconds
-9.59108x real-time
-Benchmarking tanh layer, with input size 16 and output size 16, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.650358 seconds
-15.3762x real-time
+Processed 0.1 seconds of signal in 0.0051029 seconds
+19.5967x real-time
+Benchmarking tanh layer, with input size 16 and output size 16, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.000575238 seconds
+173.841x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 4.7e-08 seconds
+2.12766e+06x real-time
 TORCH...
-Processed 10 seconds of signal in 1.0825 seconds
-9.23784x real-time
-Benchmarking tanh layer, with input size 32 and output size 32, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 1.27387 seconds
-7.8501x real-time
+Processed 0.1 seconds of signal in 0.00596633 seconds
+16.7607x real-time
+Benchmarking tanh layer, with input size 32 and output size 32, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.00100452 seconds
+99.5501x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 0.00114021 seconds
+87.7035x real-time
 TORCH...
-Processed 10 seconds of signal in 1.11356 seconds
-8.98018x real-time
-Benchmarking tanh layer, with input size 64 and output size 64, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 2.52347 seconds
-3.96279x real-time
+Processed 0.1 seconds of signal in 0.00556876 seconds
+17.9573x real-time
+Benchmarking tanh layer, with input size 64 and output size 64, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.0019896 seconds
+50.2614x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 0.00209131 seconds
+47.8169x real-time
 TORCH...
-Processed 10 seconds of signal in 1.1698 seconds
-8.54848x real-time
-Benchmarking relu layer, with input size 4 and output size 4, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.119454 seconds
-83.7141x real-time
+Processed 0.1 seconds of signal in 0.00689198 seconds
+14.5096x real-time
+Benchmarking relu layer, with input size 4 and output size 4, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 3.4623e-05 seconds
+2888.25x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 3.9e-08 seconds
+2.5641e+06x real-time
 TORCH...
-Processed 10 seconds of signal in 1.31171 seconds
-7.62361x real-time
-Benchmarking relu layer, with input size 8 and output size 8, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.214083 seconds
-46.7107x real-time
+Processed 0.1 seconds of signal in 0.0059257 seconds
+16.8756x real-time
+Benchmarking relu layer, with input size 8 and output size 8, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 3.8143e-05 seconds
+2621.71x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 6.6e-08 seconds
+1.51515e+06x real-time
 TORCH...
-Processed 10 seconds of signal in 1.37872 seconds
-7.25309x real-time
-Benchmarking relu layer, with input size 16 and output size 16, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.408415 seconds
-24.4849x real-time
+Processed 0.1 seconds of signal in 0.00601713 seconds
+16.6192x real-time
+Benchmarking relu layer, with input size 16 and output size 16, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 5.8853e-05 seconds
+1699.15x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 4.8e-08 seconds
+2.08333e+06x real-time
 TORCH...
-Processed 10 seconds of signal in 1.2856 seconds
-7.77847x real-time
-Benchmarking relu layer, with input size 32 and output size 32, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.787072 seconds
-12.7053x real-time
+Processed 0.1 seconds of signal in 0.00633884 seconds
+15.7758x real-time
+Benchmarking relu layer, with input size 32 and output size 32, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 8.9128e-05 seconds
+1121.98x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 4.9e-08 seconds
+2.04082e+06x real-time
 TORCH...
-Processed 10 seconds of signal in 1.42545 seconds
-7.01534x real-time
-Benchmarking relu layer, with input size 64 and output size 64, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 1.54516 seconds
-6.47184x real-time
+Processed 0.1 seconds of signal in 0.00670462 seconds
+14.9151x real-time
+Benchmarking relu layer, with input size 64 and output size 64, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.000190877 seconds
+523.898x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 0.000237565 seconds
+420.937x real-time
 TORCH...
-Processed 10 seconds of signal in 1.38536 seconds
-7.21836x real-time
-Benchmarking sigmoid layer, with input size 4 and output size 4, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.139574 seconds
-71.6467x real-time
+Processed 0.1 seconds of signal in 0.00625021 seconds
+15.9995x real-time
+Benchmarking sigmoid layer, with input size 4 and output size 4, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.000125657 seconds
+795.817x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 4.4e-08 seconds
+2.27273e+06x real-time
 TORCH...
-Processed 10 seconds of signal in 1.00551 seconds
-9.94523x real-time
-Benchmarking sigmoid layer, with input size 8 and output size 8, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.25615 seconds
-39.0397x real-time
+Processed 0.1 seconds of signal in 0.00557419 seconds
+17.9398x real-time
+Benchmarking sigmoid layer, with input size 8 and output size 8, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.000212613 seconds
+470.338x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 4.3e-08 seconds
+2.32558e+06x real-time
 TORCH...
-Processed 10 seconds of signal in 1.0462 seconds
-9.55844x real-time
-Benchmarking sigmoid layer, with input size 16 and output size 16, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.491102 seconds
-20.3623x real-time
+Processed 0.1 seconds of signal in 0.0058277 seconds
+17.1594x real-time
+Benchmarking sigmoid layer, with input size 16 and output size 16, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.000419131 seconds
+238.589x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 0.000457069 seconds
+218.785x real-time
 TORCH...
-Processed 10 seconds of signal in 0.930888 seconds
-10.7424x real-time
-Benchmarking sigmoid layer, with input size 32 and output size 32, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 0.955338 seconds
-10.4675x real-time
+Processed 0.1 seconds of signal in 0.00564143 seconds
+17.726x real-time
+Benchmarking sigmoid layer, with input size 32 and output size 32, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.000851589 seconds
+117.428x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 0.00099054 seconds
+100.955x real-time
 TORCH...
-Processed 10 seconds of signal in 0.997556 seconds
-10.0245x real-time
-Benchmarking sigmoid layer, with input size 64 and output size 64, with signal length 10 seconds
-RTNEURAL...
-Processed 10 seconds of signal in 1.8851 seconds
-5.30476x real-time
+Processed 0.1 seconds of signal in 0.00629467 seconds
+15.8865x real-time
+Benchmarking sigmoid layer, with input size 64 and output size 64, with signal length 0.1 seconds
+RTNEURAL STATIC...
+Processed 0.1 seconds of signal in 0.00151506 seconds
+66.0041x real-time
+RTNEURAL DYNAMIC...
+Processed 0.1 seconds of signal in 0.00170403 seconds
+58.6844x real-time
 TORCH...
-Processed 10 seconds of signal in 1.07852 seconds
-9.27195x real-time
+Processed 0.1 seconds of signal in 0.00492015 seconds
+20.3246x real-time

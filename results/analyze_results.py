@@ -53,6 +53,7 @@ def make_plot(title, file_name, results):
     for i in range(4):
         plt.semilogy(base_results["sizes"], results[i])
     plt.axhline(y = 1, linestyle='--', color='r')
+    plt.xscale('log', basex=2)
 
     plt.title(title)
     plt.xlabel('Layer Size')

@@ -41,13 +41,13 @@ int main(int argc, char* argv[])
     const auto n_samples = static_cast<size_t>(sample_rate * length_seconds);
 
     std::cout << "RTNEURAL STATIC..." << std::endl;
-    auto duration = rtneural_bench_dynamic(layer_type, size, n_samples);
+    auto duration = rtneural_bench(layer_type, size, n_samples);
     std::cout << "Processed " << length_seconds << " seconds of signal in "
               << duration << " seconds" << std::endl;
     std::cout << length_seconds / duration << "x real-time" << std::endl;
 
     std::cout << "RTNEURAL DYNAMIC..." << std::endl;
-    duration = rtneural_bench(layer_type, size, n_samples);
+    duration = rtneural_bench_dynamic(layer_type, size, n_samples);
     std::cout << "Processed " << length_seconds << " seconds of signal in "
               << duration << " seconds" << std::endl;
     std::cout << length_seconds / duration << "x real-time" << std::endl;

@@ -9,7 +9,7 @@ inferencing engines being compared:
 - [libtorch](https://pytorch.org/cppdocs/)
 
 ## Results
-All benchmarks results were obtained on a Macbook with an Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz.
+All benchmarks results were obtained on a 2018 Mac Mini with an Intel(R) Core(TM) i7-8700B CPU @ 3.20GHz.
 
 ### Dense:
 

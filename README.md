@@ -10,6 +10,7 @@ inferencing engines being compared:
 
 ## Results
 All benchmarks results were obtained on a 2018 Mac Mini with an Intel(R) Core(TM) i7-8700B CPU @ 3.20GHz.
+The "Real-Time Factor" measurement assumes a sample rate of 48 kHz.
 
 ### Dense:
 

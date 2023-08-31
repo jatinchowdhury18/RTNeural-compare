@@ -1,12 +1,13 @@
 # RTNeural Comparisons
 
 This repository contains an executable for comparing the performance
-of C++ neural network inferencing engines. Currently, there are three
+of C++ neural network inferencing engines. Currently, there are four
 inferencing engines being compared:
 
 - [RTNeural](https://github.com/jatinchowdhury18/RTNeural) (compile-time API)
 - RTNeural (run-time API)
 - [libtorch](https://pytorch.org/cppdocs/)
+- [onnxruntime](https://github.com/microsoft/onnxruntime)
 
 ## Results
 All benchmarks results were obtained on a 2018 Mac Mini with an Intel(R) Core(TM) i7-8700B CPU @ 3.20GHz.

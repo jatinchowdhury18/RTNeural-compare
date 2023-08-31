@@ -3,6 +3,7 @@
 #include <iostream>
 #include "torch_layer.hpp"
 #include "rtneural_layer.hpp"
+#include "onnx_layer.hpp"
 
 void help()
 {
@@ -52,11 +53,19 @@ int main(int argc, char* argv[])
               << duration << " seconds" << std::endl;
     std::cout << length_seconds / duration << "x real-time" << std::endl;
 
+#if ! RTNEURAL_ONLY
     std::cout << "TORCH..." << std::endl;
     duration = torch_bench(layer_type, size, n_samples);
     std::cout << "Processed " << length_seconds << " seconds of signal in "
               << duration << " seconds" << std::endl;
     std::cout << length_seconds / duration << "x real-time" << std::endl;
+
+    std::cout << "ONNX..." << std::endl;
+    duration = onnx_bench(layer_type, size, n_samples);
+    std::cout << "Processed " << length_seconds << " seconds of signal in "
+              << duration << " seconds" << std::endl;
+    std::cout << length_seconds / duration << "x real-time" << std::endl;
+#endif
 
     return 0;
 }

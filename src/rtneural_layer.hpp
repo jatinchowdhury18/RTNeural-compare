@@ -4,31 +4,31 @@
 #include "../modules/RTNeural/bench/layer_creator.hpp"
 
 #define RUN_LAYER(Type, size, rand_func)\
-    ModelT<double, size, size, Type<double, size, size>> model;\
+    ModelT<float, size, size, Type<float, size, size>> model;\
     rand_func (model.get<0>());\
     duration = run_layer(model);
 
 #define RUN_CONV(size, rand_func)\
-    ModelT<double, size, size, Conv1DT<double, size, size, size-1, 1>> model;\
+    ModelT<float, size, size, Conv1DT<float, size, size, size-1, 1>> model;\
     rand_func (model.get<0>(), size-1);\
     duration = run_layer(model);
 
 #define RUN_ACTIVATION(Type, size)\
-    ModelT<double, size, size, Type<double, size>> model;\
+    ModelT<float, size, size, Type<float, size>> model;\
     duration = run_layer(model);
 
 using clock_tt = std::chrono::high_resolution_clock;
 using second_tt = std::chrono::duration<double>;
 
-std::vector<std::vector<double>> generate_signal(size_t n_samples,
+std::vector<std::vector<float>> generate_signal(size_t n_samples,
     size_t in_size)
 {
-    std::vector<std::vector<double>> signal(n_samples);
+    std::vector<std::vector<float>> signal(n_samples);
     for(auto& x : signal)
-        x.resize(in_size, 0.0);
+        x.resize(in_size, 0.0f);
 
     std::default_random_engine generator;
-    std::uniform_real_distribution<double> distribution(-1.0, 1.0);
+    std::uniform_real_distribution<float> distribution(-1.0f, 1.0f);
 
     for(size_t i = 0; i < n_samples; ++i)
         for(size_t k = 0; k < in_size; ++k)
@@ -40,13 +40,13 @@ std::vector<std::vector<double>> generate_signal(size_t n_samples,
 double rtneural_bench_dynamic(const std::string &layer_type, size_t size, size_t n_samples)
 {
     // create layer
-    auto layer = create_layer(layer_type, size, size);
+    auto layer = create_layer<float>(layer_type, size, size);
     if(layer == nullptr)
         return -1.0;
 
     // generate audio
     const auto signal = generate_signal(n_samples, size);
-    std::vector<double> output(size);
+    std::vector<float> output(size);
 
     // run benchmark
     using clock_t = std::chrono::high_resolution_clock;
@@ -78,23 +78,23 @@ double rtneural_bench (const std::string &layer_type, size_t size, size_t n_samp
     {
         if(size == 4)
         {
-            RUN_LAYER(DenseT, 4, randomise_dense)
+            RUN_LAYER(DenseT, 4, randomise_dense<float>)
         }
         else if(size == 8)
         {
-            RUN_LAYER(DenseT, 8, randomise_dense)
+            RUN_LAYER(DenseT, 8, randomise_dense<float>)
         }
         else if(size == 16)
         {
-            RUN_LAYER(DenseT, 16, randomise_dense)
+            RUN_LAYER(DenseT, 16, randomise_dense<float>)
         }
         else if(size == 32)
         {
-            RUN_LAYER(DenseT, 32, randomise_dense)
+            RUN_LAYER(DenseT, 32, randomise_dense<float>)
         }
         else if(size == 64)
         {
-            RUN_LAYER(DenseT, 64, randomise_dense)
+            RUN_LAYER(DenseT, 64, randomise_dense<float>)
         }
         else
         {
@@ -105,23 +105,23 @@ double rtneural_bench (const std::string &layer_type, size_t size, size_t n_samp
     {
         if(size == 4)
         {
-            RUN_CONV(4, randomise_conv1d)
+            RUN_CONV(4, randomise_conv1d<float>)
         }
         else if(size == 8)
         {
-            RUN_CONV(8, randomise_conv1d)
+            RUN_CONV(8, randomise_conv1d<float>)
         }
         else if(size == 16)
         {
-            RUN_CONV(16, randomise_conv1d)
+            RUN_CONV(16, randomise_conv1d<float>)
         }
         else if(size == 32)
         {
-            RUN_CONV(32, randomise_conv1d)
+            RUN_CONV(32, randomise_conv1d<float>)
         }
         else if(size == 64)
         {
-            RUN_CONV(64, randomise_conv1d)
+            RUN_CONV(64, randomise_conv1d<float>)
         }
         else
         {
@@ -132,23 +132,23 @@ double rtneural_bench (const std::string &layer_type, size_t size, size_t n_samp
     {
         if(size == 4)
         {
-            RUN_LAYER(GRULayerT, 4, randomise_gru)
+            RUN_LAYER(GRULayerT, 4, randomise_gru<float>)
         }
         else if(size == 8)
         {
-            RUN_LAYER(GRULayerT, 8, randomise_gru)
+            RUN_LAYER(GRULayerT, 8, randomise_gru<float>)
         }
         else if(size == 16)
         {
-            RUN_LAYER(GRULayerT, 16, randomise_gru)
+            RUN_LAYER(GRULayerT, 16, randomise_gru<float>)
         }
         else if(size == 32)
         {
-            RUN_LAYER(GRULayerT, 32, randomise_gru)
+            RUN_LAYER(GRULayerT, 32, randomise_gru<float>)
         }
         else if(size == 64)
         {
-            RUN_LAYER(GRULayerT, 64, randomise_gru)
+            RUN_LAYER(GRULayerT, 64, randomise_gru<float>)
         }
         else
         {
@@ -159,23 +159,23 @@ double rtneural_bench (const std::string &layer_type, size_t size, size_t n_samp
     {
         if(size == 4)
         {
-            RUN_LAYER(LSTMLayerT, 4, randomise_lstm)
+            RUN_LAYER(LSTMLayerT, 4, randomise_lstm<float>)
         }
         else if(size == 8)
         {
-            RUN_LAYER(LSTMLayerT, 8, randomise_lstm)
+            RUN_LAYER(LSTMLayerT, 8, randomise_lstm<float>)
         }
         else if(size == 16)
         {
-            RUN_LAYER(LSTMLayerT, 16, randomise_lstm)
+            RUN_LAYER(LSTMLayerT, 16, randomise_lstm<float>)
         }
         else if(size == 32)
         {
-            RUN_LAYER(LSTMLayerT, 32, randomise_lstm)
+            RUN_LAYER(LSTMLayerT, 32, randomise_lstm<float>)
         }
         else if(size == 64)
         {
-            RUN_LAYER(LSTMLayerT, 64, randomise_lstm)
+            RUN_LAYER(LSTMLayerT, 64, randomise_lstm<float>)
         }
         else
         {

@@ -77,6 +77,14 @@ def load_file_rtneural(file):
     return rt_st, rt_dyn
 
 def make_plot(title, file_name, results):
+    legend_labels = ['Torch', 'ONNX', 'TFLITE',
+     'RTNeural - xsimd (Static)', 'RTNeural - Eigen (Static)', 'RTNeural - STL (Static)',
+     'RTNeural - xsimd', 'RTNeural - Eigen', 'RTNeural - STL']
+
+    if ("GRU" in title) or ("LSTM" in title):
+        del legend_labels[2]
+        del results[2]
+
     fig, ax = plt.subplots(figsize=(9, 5), layout='constrained')
     for i in range(len(results)):
         ax.semilogy(base_results["sizes"], results[i])
@@ -87,11 +95,7 @@ def make_plot(title, file_name, results):
     plt.xlabel('Layer Size')
     plt.ylabel('Speed (real-time factor)')
     plt.grid(True)
-    fig.legend(['Torch', 'ONNX', 'TFLITE',
-               'RTNeural - xsimd (Static)', 'RTNeural - Eigen (Static)', 'RTNeural - STL (Static)',
-               'RTNeural - xsimd', 'RTNeural - Eigen', 'RTNeural - STL'],
-              # bbox_to_anchor=(1.15, 1.1),
-              loc="outside right upper")
+    fig.legend(legend_labels, loc="outside right upper")
 
     plt.savefig(file_name)
 

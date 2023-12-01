@@ -23,6 +23,11 @@ run_bench()
 
     for layer in ${layers[@]}; do
         for size in ${sizes[@]}; do
+            if [ $layer == "conv1d" ] && [ $size -gt 16 ]; then
+              length_seconds=4
+            else
+              length_seconds=10
+            fi
             $bench $layer $length_seconds $size | tee -a $1
         done
     done
@@ -36,11 +41,11 @@ run_bench()
     done
 }
 
-#build_bench "RTNEURAL_STL"
-run_bench "results/bench_stl_tflite.txt"
+build_bench "RTNEURAL_STL"
+run_bench "results/bench_stl.txt"
 
-#build_bench "RTNEURAL_EIGEN" "-DRTNEURAL_ONLY=ON"
-#run_bench "results/bench_eigen.txt"
-#
-#build_bench "RTNEURAL_XSIMD" "-DRTNEURAL_ONLY=ON"
-#run_bench "results/bench_xsimd.txt"
+build_bench "RTNEURAL_EIGEN" "-DRTNEURAL_ONLY=ON"
+run_bench "results/bench_eigen.txt"
+
+build_bench "RTNEURAL_XSIMD" "-DRTNEURAL_ONLY=ON"
+run_bench "results/bench_xsimd.txt"

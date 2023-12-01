@@ -31,7 +31,7 @@ double onnx_bench(const std::string &layer_type, size_t size, size_t n_samples) 
     session_options.SetIntraOpNumThreads(1);
     session_options.SetInterOpNumThreads(1);
     const auto model_path =
-            std::string{BENCH_ROOT_DIR} + "/onnx_models/" + layer_type + "_" + std::to_string(size) + ".onnx";
+            std::string{BENCH_ROOT_DIR} + "/bench_models/" + layer_type + "_" + std::to_string(size) + ".onnx";
     Ort::Session session = Ort::Session(env, model_path.c_str(), session_options);
 
     // print name/shape of inputs
@@ -103,7 +103,7 @@ double onnx_bench(const std::string &layer_type, size_t size, size_t n_samples) 
 //        std::cout << "Done!" << std::endl;
 
         // double-check the dimensions of the output tensors
-        // NOTE: the number of output tensors is equal to the number of output nodes specifed in the Run() call
+        // NOTE: the number of output tensors is equal to the number of output nodes specified in the Run() call
         assert(output_tensors.size() == output_names.size() && output_tensors[0].IsTensor());
     } catch (const Ort::Exception &exception) {
         std::cout << "ERROR running model inference: " << exception.what() << std::endl;

@@ -36,11 +36,11 @@ run_bench()
     done
 }
 
-build_bench "RTNEURAL_STL"
-run_bench "results/bench_stl.txt"
+#build_bench "RTNEURAL_STL"
+run_bench "results/bench_stl_tflite.txt"
 
-build_bench "RTNEURAL_EIGEN" "-DRTNEURAL_ONLY=ON"
-run_bench "results/bench_eigen.txt"
-
-build_bench "RTNEURAL_XSIMD" "-DRTNEURAL_ONLY=ON"
-run_bench "results/bench_xsimd.txt"
+#build_bench "RTNEURAL_EIGEN" "-DRTNEURAL_ONLY=ON"
+#run_bench "results/bench_eigen.txt"
+#
+#build_bench "RTNEURAL_XSIMD" "-DRTNEURAL_ONLY=ON"
+#run_bench "results/bench_xsimd.txt"

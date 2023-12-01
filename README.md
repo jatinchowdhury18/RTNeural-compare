@@ -8,6 +8,7 @@ inferencing engines being compared:
 - RTNeural (run-time API)
 - [libtorch](https://pytorch.org/cppdocs/)
 - [onnxruntime](https://github.com/microsoft/onnxruntime)
+- [TensorFlow Lite](https://www.tensorflow.org/lite)
 
 ## Results
 All benchmarks results were obtained on a 2018 Mac Mini with an Intel(R) Core(TM) i7-8700B CPU @ 3.20GHz.
@@ -15,37 +16,30 @@ The "Real-Time Factor" measurement assumes a sample rate of 48 kHz.
 
 ### Dense:
 
-![](./plots/dense_static.png)
-![](./plots/dense_dynamic.png)
+![](./plots/dense.png)
 
 ### Conv1D:
 
-![](./plots/conv1d_static.png)
-![](./plots/conv1d_dynamic.png)
+![](./plots/conv1d.png)
 
 ### GRU:
 
-![](./plots/gru_static.png)
-![](./plots/gru_dynamic.png)
+![](./plots/gru.png)
 
 ### LSTM:
 
-![](./plots/lstm_static.png)
-![](./plots/lstm_dynamic.png)
+![](./plots/lstm.png)
 
 ### Activations:
 
 Tanh:
 
-![](./plots/tanh_static.png)
-![](./plots/tanh_dynamic.png)
+![](./plots/tanh.png)
 
 ReLU:
 
-![](./plots/relu_static.png)
-![](./plots/relu_dynamic.png)
+![](./plots/relu.png)
 
 Sigmoid:
 
-![](./plots/sigmoid_static.png)
-![](./plots/sigmoid_dynamic.png)
+![](./plots/sigmoid.png)

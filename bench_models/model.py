@@ -25,6 +25,12 @@ def create_model(size: int):
     return model
 
 for size in [4, 8, 16, 32, 64]:
-    model = create_model(size)
-    model.save(f'{layer}_{size}.tf')
-    os.system(f'python3.9 -m tf2onnx.convert --saved-model {layer}_{size}.tf --output {layer}_{size}.onnx')
+    # model = create_model(size)
+    tf_model = f'{layer}_{size}.tf'
+    # model.save(tf_model)
+
+    converter = tf.lite.TFLiteConverter.from_saved_model(tf_model)
+    with open(f'{layer}_{size}.tflite', 'wb') as tflite_model_file:
+        tflite_model_file.write(converter.convert())
+
+    # os.system(f'python3.9 -m tf2onnx.convert --saved-model {tf_model} --output {layer}_{size}.onnx')

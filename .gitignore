@@ -1,8 +1,10 @@
 /build*
 modules/libtorch*
 modules/onnxruntime*
+modules/tensorflowlite*
 /.vscode
 /.idea
 *.tf
+*.tflite
 *.onnx
 .DS_Store

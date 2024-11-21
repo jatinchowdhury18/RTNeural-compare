@@ -1,7 +1,7 @@
 # RTNeural Comparisons
 
 This repository contains an executable for comparing the performance
-of C++ neural network inferencing engines. Currently, there are four
+of C++ neural network inferencing engines. Currently, there are five
 inferencing engines being compared:
 
 - [RTNeural](https://github.com/jatinchowdhury18/RTNeural) (compile-time API)
